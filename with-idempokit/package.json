@@ -1,0 +1,31 @@
+{
+  "name": "payment-api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn ./src/server.ts",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@idempotkit/core": "file:../../idempokit/core/",
+    "@idempotkit/mongodb-adapter": "file:../../idempokit/adapters/mongodb",
+    "@idempotkit/postgres-adapter": "file:../../idempokit/adapters/postgres",
+    "@idempotkit/redis-adapter": "file:../../idempokit/adapters/redis",
+    "dotenv": "^16.4.0",
+    "express": "^5.2.1",
+    "ioredis": "^5.4.0",
+    "mongodb": "^6.3.0",
+    "pg": "^8.18.0",
+    "supertest": "^7.2.2",
+    "vitest": "^4.0.18"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/pg": "^8.16.0",
+    "@types/supertest": "^6.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.4.0"
+  }
+}
