@@ -1,6 +1,13 @@
 {
   "name": "payment-api",
   "version": "1.0.0",
+  "files": [
+    "dist/**/*",
+    "!dist/__tests__/**",
+    "!dist/**/*.test.*",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "dev": "ts-node-dev --respawn ./src/server.ts",
     "start": "node dist/server.js",
@@ -8,10 +15,10 @@
     "build": "tsc"
   },
   "dependencies": {
-    "@idempotkit/core": "file:../../idempokit/core/",
-    "@idempotkit/mongodb-adapter": "file:../../idempokit/adapters/mongodb",
-    "@idempotkit/postgres-adapter": "file:../../idempokit/adapters/postgres",
-    "@idempotkit/redis-adapter": "file:../../idempokit/adapters/redis",
+    "@idempotkit/core": "^1.0.2",
+    "@idempotkit/mongodb-adapter": "^1.0.0",
+    "@idempotkit/postgres-adapter": "^1.0.0",
+    "@idempotkit/redis-adapter": "^1.0.0",
     "dotenv": "^16.4.0",
     "express": "^5.2.1",
     "ioredis": "^5.4.0",
